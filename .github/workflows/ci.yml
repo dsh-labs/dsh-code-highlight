@@ -1,0 +1,35 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Version comes from package.json `packageManager`.
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run typecheck
+      - run: pnpm run build
+      - run: pnpm test
+      # Contract against the public npm packages of DSH 0.2.1-rc.5 and 0.2.2-rc.1.
+      - run: node scripts/contract.mjs
+      - name: Reproducible build
+        run: scripts/check-reproducible.sh
+      - name: Pack (dry run)
+        run: npm pack --dry-run
