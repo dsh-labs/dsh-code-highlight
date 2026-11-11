@@ -1,2 +1,7 @@
+# Single-package repo. `packages` is set explicitly because pnpm 9 rejects a
+# workspace file without it ("packages field missing or empty"); `allowBuilds`
+# lets esbuild (used by tsdown/vitest) run its install script under pnpm 10+.
+packages:
+  - .
 allowBuilds:
   esbuild: true
