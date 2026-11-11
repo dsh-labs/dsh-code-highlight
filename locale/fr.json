@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Coloration du code dans les cartes d'édition",
+    "description": "Colore la syntaxe des diffs des cartes edit, write et apply_patch avec le surligneur intégré de DSH."
+  }
+}

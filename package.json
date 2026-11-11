@@ -1,0 +1,78 @@
+{
+  "name": "dsh-code-highlight",
+  "version": "0.1.0",
+  "description": "Syntax-highlighted diffs for edit / write / apply_patch tool cards in the DeepSeek Harness chat, using DSH's own highlighter.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "client-plugin",
+    "syntax-highlighting",
+    "diff"
+  ],
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./client": "./dist/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "locale",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.1-rc.5 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-tool"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:contract": "node scripts/contract.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.0",
+    "@deepseek-ai/dsh-client-ui-primitives": ">=0.2.1-rc.5 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-slots": ">=0.2.1-rc.5 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-tool": ">=0.2.1-rc.5 <0.3.0-0",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.1.0",
+    "@deepseek-ai/dsh-client-ui-chat": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-client-ui-conversation": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-client-ui-primitives": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-client-ui-slots": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-client-ui-tool": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-util-code-language": "0.2.2-rc.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^22.20.5",
+    "@types/react": "~18.3.31",
+    "diff": "^9.0.0",
+    "jsdom": "^31.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsdown": "^0.23.7",
+    "typescript": "~5.9.3",
+    "vitest": "^3.2.7"
+  }
+}

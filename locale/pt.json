@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Destaque de código nos cartões de edição",
+    "description": "Destaca a sintaxe dos diffs dos cartões edit, write e apply_patch com o realce nativo do DSH."
+  }
+}

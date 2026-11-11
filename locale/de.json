@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Code-Hervorhebung in Bearbeitungskarten",
+    "description": "Hebt die Diffs der Werkzeugkarten edit, write und apply_patch mit dem DSH-eigenen Highlighter hervor."
+  }
+}

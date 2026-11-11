@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Code highlighting in edit cards",
+    "description": "Syntax-highlights the diffs of edit, write and apply_patch tool cards with DSH's own highlighter."
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "编辑卡片代码高亮",
+    "description": "用 DSH 自带的高亮器为 edit、write、apply_patch 工具卡片里的 diff 加上语法高亮。"
+  }
+}

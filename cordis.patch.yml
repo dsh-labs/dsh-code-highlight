@@ -1,0 +1,5 @@
+# dsh bundle patch: inserts this plugin into a profile's layer stack.
+# The Host row is empty; the Client half (package.json `dsh.client`) does the work.
+- insert:
+    - id: dsh-code-highlight
+      name: 'dsh-code-highlight'

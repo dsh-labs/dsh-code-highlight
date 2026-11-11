@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "編集カードのコードハイライト",
+    "description": "DSH 標準のハイライターで edit・write・apply_patch ツールカードの差分を構文ハイライトします。"
+  }
+}

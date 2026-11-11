@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Resaltado de código en tarjetas de edición",
+    "description": "Resalta la sintaxis de los diffs de las tarjetas edit, write y apply_patch con el resaltador propio de DSH."
+  }
+}
