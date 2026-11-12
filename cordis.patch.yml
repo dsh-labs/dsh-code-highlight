@@ -2,4 +2,4 @@
 # The Host row is empty; the Client half (package.json `dsh.client`) does the work.
 - insert:
     - id: dsh-code-highlight
-      name: 'dsh-code-highlight'
+      name: '@dsh-labs/dsh-code-highlight'
