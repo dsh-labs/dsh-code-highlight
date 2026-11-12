@@ -36,6 +36,10 @@ Inherited from DSH, deliberately not worked around:
   detection, so an extension-less script such as `deploy` stays plain.
 - Lines of 1000 or more characters stay plain.
 
+One row differs from the stock card on purpose: the collapsed `apply_patch` row shows only the
+`+N −M` totals. Stock names the patched files there, and since DSH 0.2.2-rc.2 it links each file of a
+multi-file patch individually; this card names the files once it is expanded instead.
+
 Cases that render with the **stock card, unchanged**:
 
 - languages DSH does not map;
@@ -47,10 +51,11 @@ Cases that render with the **stock card, unchanged**:
 
 | DSH | Status |
 |---|---|
+| 0.2.2-rc.2 | Contract-checked against its public npm packages; not verified in the GUI |
 | 0.2.2-rc.1 | Contract-checked; verified in the GUI |
 | 0.2.1-rc.5 | Contract-checked against its public npm packages; not verified in the GUI |
 
-`node scripts/contract.mjs` downloads the public packages of both releases from npm. It fails if
+`node scripts/contract.mjs` downloads the public packages of all three releases from npm. It fails if
 `tool.call.toolview`, `useCodeHighlighter`, `languageForPath` or the reused primitives change shape.
 
 ## Develop

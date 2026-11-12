@@ -5,3 +5,13 @@ packages:
   - .
 allowBuilds:
   esbuild: true
+# rc.2 packages published 2026-11-12, inside pnpm's default 24h minimumReleaseAge
+# window. Version-pinned exemptions let local and CI installs resolve the exact
+# versions this plugin is contract-tested against; drop them once rc.2 ages out.
+minimumReleaseAgeExclude:
+  - '@deepseek-ai/dsh-client-ui-chat@0.2.2-rc.2'
+  - '@deepseek-ai/dsh-client-ui-conversation@0.2.2-rc.2'
+  - '@deepseek-ai/dsh-client-ui-primitives@0.2.2-rc.2'
+  - '@deepseek-ai/dsh-client-ui-slots@0.2.2-rc.2'
+  - '@deepseek-ai/dsh-client-ui-tool@0.2.2-rc.2'
+  - '@deepseek-ai/dsh-util-code-language@0.2.2-rc.2'
