@@ -1,5 +1,5 @@
 {
-  "name": "dsh-code-highlight",
+  "name": "@dsh-labs/dsh-code-highlight",
   "version": "0.1.1",
   "description": "Syntax-highlighted diffs for edit / write / apply_patch tool cards in the DeepSeek Harness chat, using DSH's own highlighter.",
   "type": "module",

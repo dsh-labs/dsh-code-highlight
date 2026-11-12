@@ -21,7 +21,7 @@ export default defineConfig([
             neverBundle: ['react', 'react-dom', 'react/jsx-runtime', '@deepseek-ai/dsh-client-ui-primitives', /^@deepseek-ai\/cordis/],
             alwaysBundle: ['diff'],
         },
-        banner: 'window.__ModuleLoader__.load({\n  id: "dsh-code-highlight",\n  factory: (require) => {\n    var module = { exports: {} };\n    var exports = module.exports;\n    Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });',
+        banner: 'window.__ModuleLoader__.load({\n  id: "@dsh-labs/dsh-code-highlight",\n  factory: (require) => {\n    var module = { exports: {} };\n    var exports = module.exports;\n    Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });',
         footer: '\n    return module.exports;\n  }\n});',
     },
 ])

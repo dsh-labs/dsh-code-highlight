@@ -11,7 +11,7 @@ colours are exactly DSH's (`--shiki-*` theme tokens) and themes apply unchanged.
 ## Install
 
 ```sh
-dsh plugin --profile desktop add dsh-code-highlight
+dsh plugin --profile desktop add @dsh-labs/dsh-code-highlight
 ```
 
 Restart DSH, or reload the window, after installing. For the browser profile, use `--profile web`.
