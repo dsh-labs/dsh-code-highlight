@@ -27,7 +27,7 @@ jobs:
       - run: pnpm run typecheck
       - run: pnpm run build
       - run: pnpm test
-      # Contract against the public npm packages of DSH 0.2.1-rc.5 and 0.2.2-rc.1.
+      # Contract against the public npm packages of DSH 0.2.2-rc.2, 0.2.2-rc.1 and 0.2.1-rc.5.
       - run: node scripts/contract.mjs
       - name: Reproducible build
         run: scripts/check-reproducible.sh

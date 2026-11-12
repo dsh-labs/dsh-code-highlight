@@ -6,7 +6,7 @@
  * `languageForPath`, …), the slot registry surface, and `languageForPath`'s
  * behaviour for the five target languages. Fails (exit 1) on any drift.
  *
- * Usage: node scripts/contract.mjs [version ...]   (default: 0.2.2-rc.1 0.2.1-rc.5)
+ * Usage: node scripts/contract.mjs [version ...]   (default: 0.2.2-rc.2 0.2.2-rc.1 0.2.1-rc.5)
  */
 import { execFileSync } from 'node:child_process'
 import { existsSync, mkdirSync, readFileSync } from 'node:fs'
@@ -14,7 +14,7 @@ import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 import { pathToFileURL } from 'node:url'
 
-const versions = process.argv.slice(2).length > 0 ? process.argv.slice(2) : ['0.2.2-rc.1', '0.2.1-rc.5']
+const versions = process.argv.slice(2).length > 0 ? process.argv.slice(2) : ['0.2.2-rc.2', '0.2.2-rc.1', '0.2.1-rc.5']
 const cache = join(tmpdir(), 'dsh-code-highlight-contract')
 const PACKAGES = ['dsh-client-ui-tool', 'dsh-client-ui-primitives', 'dsh-client-ui-slots', 'dsh-client-ui-conversation', 'dsh-util-code-language']
 
